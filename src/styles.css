@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import "vendor/bootstrap.min.css";
+
+.highlight{
+    padding-left:5px;
+    background-color: #f7f7f9;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.highlight pre code {
+    font-size: inherit;
+    color: #212529;
+}
+

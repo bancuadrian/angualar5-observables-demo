@@ -1,0 +1,113 @@
+<div class="row">
+  <div class="col text-center">
+    <span class="display-4">Observer Types</span>
+  </div>
+</div>
+<div class="row">
+  <div class="col text-left mt-lg-auto pl-4">
+    Select Observer Type
+    <select #subjectType (change)="subjectDescription = getDescription(subjectType.value)">
+      <option value="subject">Subject</option>
+      <option value="async">AsyncSubject</option>
+      <option value="behavior">Behavior</option>
+      <option value="replay">Replay</option>
+    </select>
+  </div>
+  <div class="col text-justify p-4">
+    <blockquote class="blockquote">
+      {{ subjectDescription }}
+    </blockquote>
+  </div>
+</div>
+<div class="row mb-3 mt-3">
+  <div class="col pl-4">
+    <input type="text" placeholder="Enter time in ms to wait before subscribing" #waitForSubscribe />
+    <button (click)="testSubject()">Start</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col pl-4">
+    Events Output
+    <pre #scrollMe class="highlight" style="max-height: 200px;height:200px;overflow-y: auto">
+            <code class="language-html">
+{{ output }}
+            </code>
+        </pre>
+  </div>
+  <div class="col">
+    Subscriber Output
+    <pre #scrollMe class="highlight" style="max-height: 200px;height:200px;overflow-y: auto">
+            <code class="language-html">
+{{ subscriberOutput }}
+            </code>
+        </pre>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col text-center mt-4">
+    <span class="display-4">Operators</span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col pl-4">
+    Map Operator
+    <button (click)="showMap()">Start</button>
+    <pre #scrollMe class="highlight" style="max-height: 200px;height:200px;overflow-y: auto">
+            <code class="language-html">
+{{ mappedEvent }}
+            </code>
+        </pre>
+  </div>
+  <div class="col">
+    Mapped Output
+    <pre #scrollMe class="highlight" style="max-height: 200px;height:200px;overflow-y: auto">
+            <code class="language-html">
+{{ mappedOutput }}
+            </code>
+        </pre>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col pl-4">
+    Filter Operator
+    <button (click)="showFilter()">Start</button>
+    <pre #scrollMe class="highlight" style="max-height: 200px;height:200px;overflow-y: auto">
+            <code class="language-html">
+{{ filterEvent }}
+            </code>
+        </pre>
+  </div>
+  <div class="col pl-4">
+    Filter Only Odd Ids
+    <pre #scrollMe class="highlight" style="max-height: 200px;height:200px;overflow-y: auto">
+            <code class="language-html">
+{{ filterOutput }}
+            </code>
+        </pre>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col pl-4">
+    forkJoin Operator
+    <button (click)="showForkJoin()">Start</button>
+    <pre #scrollMe class="highlight" style="max-height: 200px;height:200px;overflow-y: auto">
+            <code class="language-html">
+{{ forkJoinEvent }}
+            </code>
+        </pre>
+  </div>
+  <div class="col">
+    Wait for multiple subjects to finish
+    <pre #scrollMe class="highlight" style="max-height: 200px;height:200px;overflow-y: auto">
+            <code class="language-html">
+{{ forkJoinOutput }}
+            </code>
+        </pre>
+  </div>
+</div>
