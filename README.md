@@ -1,3 +1,5 @@
+![2018-02-02_10-18-56_971.jpeg](https://i.ytimg.com/vi/mSV0AihITxo/maxresdefault.jpg)
+
 # ObservableDemo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
